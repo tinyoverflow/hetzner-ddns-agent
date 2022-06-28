@@ -27,4 +27,9 @@ export default class HetznerZoneClient {
 
     return response.status === 200;
   }
+
+  async getRecordValue(recordId) {
+    const response = await axios.get(`${baseUrl}/${recordId}`, { headers: { "Auth-API-Token": this.apiToken } });
+    return response.data.record.value;
+  }
 }
