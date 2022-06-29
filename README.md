@@ -19,11 +19,13 @@ or port mappings, it requires the configuration of some environment variables to
 
 ### Environment variables
 
-| Variable  | Type   | Description                                                                                            |
-|-----------|--------|--------------------------------------------------------------------------------------------------------|
-| API_TOKEN | string | You can create an API token in your [Hetzner DNS Console](https://dns.hetzner.com/settings/api-token). |
-| ZONE_ID   | string | ID of the zone in which your record is located.                                                        |
-| RECORD_ID | string | ID of the record to keep updated.                                                                      |
+| Variable    | Type   | Required | Default | Description                                                                                              |
+|-------------|--------|----------|:--------|----------------------------------------------------------------------------------------------------------|
+| API_TOKEN   | string | Yes      | -       | You can create an API token in your [Hetzner DNS Console](https://dns.hetzner.com/settings/api-token).   |
+| ZONE_ID     | string | Yes      | -       | ID of the zone in which your record is located.                                                          |
+| RECORD_ID   | string | Yes      | -       | ID of the record to keep updated.                                                                        |
+| RECORD_NAME | string | No       | `@`     | Name of the record. This is basically the subdomain, or `@` if you want to use the domain itself.        |
+| RECORD_TTL  | int    | No       | `300`   | TTL of the record in seconds. It defines how long the entry should be cached by DNS servers and clients. |
 
 ### Start Docker container
 

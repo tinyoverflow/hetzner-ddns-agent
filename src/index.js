@@ -28,8 +28,8 @@ const update = async function () {
 
   // Push the update to Hetzner DNS.
   const requestData = {
-    name: "@",
-    ttl: 300,
+    name: config.recordName,
+    ttl: config.recordTtl,
     type: "A",
     value: currentIp,
     zone_id: config.zoneId,
@@ -37,7 +37,7 @@ const update = async function () {
 
   try {
     await axios.put("/records/" + config.recordId, requestData, axiosConfig);
-    console.info(`The IP address has been successfully updated to: ${currentIp} (before: ${data.lastIp ?? '-'})`);
+    console.info(`The IP address has been successfully updated to: ${currentIp} (before: ${data.lastIp ?? "-"})`);
   } catch (error) {
     console.error("An error occurred when updating the IP address:", error.response.data.message);
   }
