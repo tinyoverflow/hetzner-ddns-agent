@@ -1,6 +1,8 @@
 # 🚀 Hetzner DDNS Agent
 
 ![Build Status](https://github.com/tinyoverflow/hetzner-ddns-agent/actions/workflows/docker.yml/badge.svg)
+![Version](https://img.shields.io/github/v/tag/tinyoverflow/hetzner-ddns-agent?label=Version&sort=semver)
+![Updated](https://img.shields.io/github/last-commit/tinyoverflow/hetzner-ddns-agent?label=Updated)
 
 This program allows to use [Hetzner DNS](https://www.hetzner.com/dns-console) as
 a [DDNS](https://en.wikipedia.org/wiki/Dynamic_DNS) service. It does that by updating a given record inside a DNS zone
