@@ -39,15 +39,17 @@ or port mappings, it requires the configuration of some environment variables to
 
 ### Start Docker container
 
-    // Download the current image.
-    $ docker pull ghcr.io/tinyoverflow/hetzner-ddns-agent:latest
+```sh
+# Download the current image.
+$ docker pull ghcr.io/tinyoverflow/hetzner-ddns-agent:latest
 
-    // Run the docker container.
-    $ docker run --name hetzner-ddns-agent --detach \
-        -e "API_TOKEN=YOUR_API_TOKEN" \
-        -e "ZONE_ID=YOUR_ZONE_ID" \
-        -e "RECORD_ID=YOUR_RECORD_ID" \
-        ghcr.io/tinyoverflow/hetzner-ddns-agent:latest
+# Run the docker container.
+$ docker run --name hetzner-ddns-agent --detach \
+    -e "API_TOKEN=YOUR_API_TOKEN" \
+    -e "ZONE_ID=YOUR_ZONE_ID" \
+    -e "RECORD_ID=YOUR_RECORD_ID" \
+    ghcr.io/tinyoverflow/hetzner-ddns-agent:latest
+```
 
 ## Exit Codes
 
