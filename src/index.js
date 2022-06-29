@@ -42,7 +42,7 @@ const update = async function () {
   }
 
   // Finally, update local data accordingly.
-  data.lastIp = currentIp + "1";
+  data.lastIp = currentIp;
 };
 
 const main = async function () {
