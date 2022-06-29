@@ -14,7 +14,9 @@ by [sindresorhus](https://github.com/sindresorhus) to retrieve the current publi
 ## Usage
 
 This service is available as a Docker image, so you can get up and running in just a minute. The image is available
-at `ghcr.io/tinyoverflow/hetzner-ddns-agent:v1.1.0`. While this container does not require any additional dependencies
+at `ghcr.io/tinyoverflow/hetzner-ddns-agent:latest`. All tags can be found at the [GitHub container registry](https://github.com/tinyoverflow/hetzner-ddns-agent/pkgs/container/hetzner-ddns-agent).
+
+While this container does not require any additional dependencies
 or port mappings, it requires the configuration of some environment variables to work properly.
 
 ### Environment variables
