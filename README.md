@@ -13,7 +13,29 @@ by [sindresorhus](https://github.com/sindresorhus) to retrieve the current publi
 
 ## Usage
 
-*To be documented.*
+This service is available as a Docker image, so you can get up and running in just a minute. The image is available
+at `ghcr.io/tinyoverflow/hetzner-ddns-agent:v1.1.0`. While this container does not require any additional dependencies
+or port mappings, it requires the configuration of some environment variables to work properly.
+
+### Environment variables
+
+| Variable  | Type   | Description                                                                                            |
+|-----------|--------|--------------------------------------------------------------------------------------------------------|
+| API_TOKEN | string | You can create an API token in your [Hetzner DNS Console](https://dns.hetzner.com/settings/api-token). |
+| ZONE_ID   | string | ID of the zone in which your record is located.                                                        |
+| RECORD_ID | string | ID of the record to keep updated.                                                                      |
+
+### Start Docker container
+
+    // Download the current image.
+    $ docker pull ghcr.io/tinyoverflow/hetzner-ddns-agent:latest
+
+    // Run the docker container.
+    $ docker run --name hetzner-ddns-agent --detach \
+        -e "API_TOKEN=YOUR_API_TOKEN" \
+        -e "ZONE_ID=YOUR_ZONE_ID" \
+        -e "RECORD_ID=YOUR_RECORD_ID" \
+        hetzner-ddns-agent:latest
 
 ## Exit Codes
 
