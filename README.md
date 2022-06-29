@@ -1,6 +1,6 @@
 # 🚀 Hetzner DDNS Agent
 
-This program allows to use [Hetzner DNS](https://www.hetzner.com/de/dns-console) as
+This program allows to use [Hetzner DNS](https://www.hetzner.com/dns-console) as
 a [DDNS](https://en.wikipedia.org/wiki/Dynamic_DNS) service. It does that by updating a given record inside a DNS zone
 to the current public IPv4 address.
 
