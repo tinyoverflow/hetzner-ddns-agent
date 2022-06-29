@@ -12,3 +12,10 @@ by [sindresorhus](https://github.com/sindresorhus) to retrieve the current publi
 
 ## Usage
 *To be documented.*
+
+## Exit Codes
+
+| Code | Meaning                                |
+|-----:|----------------------------------------|
+|    0 | Success. Nothing special happened.     |
+|    1 | Invalid configuration.                 |
