@@ -48,7 +48,7 @@ const update = async function () {
 const main = async function () {
   // Print Version Information
   console.log("|----------------------------------------------------");
-  console.log("| hetzner-ddns-agent v1.2.1");
+  console.log("| hetzner-ddns-agent v" + process.env.npm_package_version);
   console.log("| https://github.com/tinyoverflow/hetzner-ddns-agent");
   console.log("|----------------------------------------------------\n");
 
