@@ -35,7 +35,7 @@ or port mappings, it requires the configuration of some environment variables to
 | RECORD_ID     | string | Yes      | -             | ID of the record to keep updated.                                                                        |
 | RECORD_NAME   | string | No       | `@`           | Name of the record. This is basically the subdomain, or `@` if you want to use the domain itself.        |
 | RECORD_TTL    | int    | No       | `300`         | TTL of the record in seconds. It defines how long the entry should be cached by DNS servers and clients. |
-| CRON_INTERVAL | string | No       | `*/5 * * * *` | Cron interval in which a check for a new IP address should be performed.                                 |
+| CRON_INTERVAL | string | No       | `*/5 * * * *` | Cron interval in which a check for a new IP address should be performed. Defaults to every 5 minutes.    |
 
 ### Start Docker container
 
@@ -47,7 +47,7 @@ or port mappings, it requires the configuration of some environment variables to
         -e "API_TOKEN=YOUR_API_TOKEN" \
         -e "ZONE_ID=YOUR_ZONE_ID" \
         -e "RECORD_ID=YOUR_RECORD_ID" \
-        hetzner-ddns-agent:latest
+        ghcr.io/tinyoverflow/hetzner-ddns-agent:latest
 
 ## Exit Codes
 
